@@ -6,18 +6,42 @@ namespace OOP
     {
         static void Main(string[] args)
         {
+            Quad fred = new Rectangle();
+            Console.WriteLine($"Fred is a {fred.WhatAmI()}"); 
+
+            var sqr1 = new Square(4);
+            Console.WriteLine($"The Perimeter of the Square is {sqr1.Perimeter()}");
+            Console.WriteLine($"The Area of the Square is {sqr1.Area()}");
+            Console.WriteLine($"The sqr1 is a {sqr1.WhatAmI()}");
 
             var rect1 = new Rectangle(5, 3);
             Console.WriteLine($"The Perimeter of the Rectangle is {rect1.Perimeter()}");
+            Console.WriteLine($"The Area of the Rectangle is {rect1.Area()}");
+            Console.WriteLine($"The rect1 is a {rect1.WhatAmI()}");
 
-            var quad1 = new Quad()
+            var quad1 = new Quad(3, 4, 5, 6);
             {
-                Side1 = 3,
-                Side2 = 4,
-                Side3 = 5,
-                Side4 = 6
-            };
+                //Side1 = 3
+                //Side2 = 4
+                //Side3 = 5
+                //Side4 = 6
+            }
             Console.WriteLine($"The Perimeter of the Quadrilateral is {quad1.Perimeter()}");
+            Console.WriteLine($"The quad1 is a {quad1.WhatAmI()}");
+
+            var collection = new Quad[]
+            {
+                fred, sqr1, rect1, quad1
+            };
+            foreach (var geo in collection)
+            {
+                Console.WriteLine($"Shape is {geo.WhatAmI()}");
+                var hello = geo as Rectangle;
+                if (hello != null)
+                {
+                    Console.WriteLine($"The area of Shape {hello.Area}");
+                }
+            }
         }
     }
 }

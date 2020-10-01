@@ -39,7 +39,7 @@ namespace OOP
                 var hello = geo as Rectangle;
                 if (hello != null)
                 {
-                    Console.WriteLine($"The area of Shape {hello.Area}");
+                    Console.WriteLine($"The area of Shape {hello.Area()}");
                 }
             }
         }

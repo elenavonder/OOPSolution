@@ -8,6 +8,5 @@ namespace OOP
     {
         int Perimeter();
         int Area();
-
     }
 }

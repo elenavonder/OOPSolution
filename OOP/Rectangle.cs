@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP
 {
-    class Rectangle : Quad
+    class Rectangle : Quad, IGeometricShape
     {
         public override string WhatAmI()
         {

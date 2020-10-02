@@ -50,7 +50,7 @@ namespace OOP
 
             var geoshapes = new IGeometricShape[]
             {
-                new Circle (1), new Circle (2), 
+                new Circle (1), new Circle (2), new Rectangle (3, 7), new Square (5),
             };
             foreach (var shape in geoshapes)
             {

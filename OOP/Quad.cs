@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP
 {
-    class Quad//Quadrillateral
+    class Quad 
     {
         public int Side1 { get; private set; }
         public int Side2 { get; private set; }

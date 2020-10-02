@@ -6,10 +6,10 @@ namespace OOP
 {
     class Quad//Quadrillateral
     {
-        protected int Side1 { get; set; }
-        protected int Side2 { get; set; }
-        protected int Side3 { get; set; }
-        protected int Side4 { get; set; }
+        public int Side1 { get; private set; }
+        public int Side2 { get; private set; }
+        public int Side3 { get; private set; }
+        public int Side4 { get; private set; }
 
         public virtual string WhatAmI()
         {

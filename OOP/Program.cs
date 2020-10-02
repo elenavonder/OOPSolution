@@ -6,6 +6,11 @@ namespace OOP
     {
         static void Main(string[] args)
         {
+            //composition
+            var rectcomp1 = new RectComp(3, 9);
+            Console.WriteLine($"The Perimeter of the rectcomp1 is {rectcomp1.Perimeter()}");
+            Console.WriteLine($"The Area of the rectcomp1 is {rectcomp1.Area()}");
+
             Quad fred = new Rectangle();
             Console.WriteLine($"Fred is a {fred.WhatAmI()}"); 
 
@@ -41,6 +46,15 @@ namespace OOP
                 {
                     Console.WriteLine($"The area of Shape {hello.Area()}");
                 }
+            }
+
+            var geoshapes = new IGeometricShape[]
+            {
+                new Circle (1), new Circle (2), 
+            };
+            foreach (var shape in geoshapes)
+            {
+            Console.WriteLine($"The Perimeter is {shape.Perimeter()} The Area is {shape.Area()}");
             }
         }
     }
